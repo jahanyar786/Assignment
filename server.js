@@ -11,19 +11,21 @@ function onHttpStart() {
 
 
 app.get("/blog", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/blog.html"));
+    res.sendFile(path.join(__dirname,"blog.html"));
   });
 
 app.get("/login", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/login.html"));
+    res.sendFile(path.join(__dirname,"login.html"));
   });
-
+  app.get("/login", function(req,res){
+    res.sendFile(path.join(__dirname,"read_more.html"));
+  });
 app.get("/registration", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/registration.html"));
+    res.sendFile(path.join(__dirname,"registration.html"));
   });
 
 app.get("/", function(req,res){
-    res.sendFile(path.join(__dirname,"/views/home.html"));
+    res.sendFile(path.join(__dirname,"home.html"));
 });
 
 app.use(express.static("public"));
